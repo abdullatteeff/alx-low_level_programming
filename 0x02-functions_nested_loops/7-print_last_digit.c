@@ -17,9 +17,9 @@ int print_last_digit(int n)
 		_putchar('0' + x);
 		return (x);
 	}
-	if (n == INT_MIN)
+	if (n == -2147483647 - 1)
 	{
-		X = INT_MIN % 10;
+		X = n % 10;
 		_putchar('0' + x);
 		return (x);
 	}
