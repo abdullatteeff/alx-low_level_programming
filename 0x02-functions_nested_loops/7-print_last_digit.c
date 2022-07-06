@@ -19,7 +19,7 @@ int print_last_digit(int n)
 	}
 	if (n == -2147483647 - 1)
 	{
-		X = n % 10;
+		x = n % 10;
 		_putchar('0' + x);
 		return (x);
 	}
