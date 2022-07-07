@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
-*add -> adds two integers and returns the result.
-*Return: Always return 0
+* add -> adds two number
+* @x : param1
+* @y : param2
+* Return: x + y
 */
 
-int add(int a, int b)
+int add(int x, int y)
 {
-	int add;
-
-	add = a + b;
-	_putchar("%d\n", add);
-	return (0);
+	return (x + y);
 }
+
