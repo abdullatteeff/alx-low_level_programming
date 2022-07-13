@@ -6,12 +6,7 @@
 * followed by a new line.
 * @str: string to be passed
 */
-void puts2(char *str)
+void puts_half(char *str)
 {
-	int i, len;
-
-	len = strlen(str);
-	for (i = 0; i < len; i += 2)
-		_putchar(str[i]);
-	_putchar{'\n');
+	
 }
