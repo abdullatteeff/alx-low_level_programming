@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
 * _strncat ->  appends the src string to the dest string
 * @dest: - param1
@@ -9,6 +9,6 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	strcat(dest, src, n);
+	strncat(dest, src, n);
 	return (dest);
 }
