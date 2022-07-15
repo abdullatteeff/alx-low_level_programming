@@ -4,7 +4,7 @@
 * print_diagonal -  prints more lines
 * @n: an int parameter
 */
-void print_diagonal(int n);
+void print_diagonal(int n)
 {
 	int x;
 
