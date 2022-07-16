@@ -19,7 +19,7 @@ void fizz_buzz(void)
 		else if (x % 5 == 0)
 			printf("Buzz ");
 		else
-			printf("d", x);
+			printf("%d", x);
 	}
 	printf("\n");
 }
