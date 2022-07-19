@@ -10,3 +10,7 @@
  * in the string s, or NULL if the character is not found
 */
 char *_strchr(char *s, char c)
+{
+	strchr(s, c);
+	return (c);
+}
