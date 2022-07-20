@@ -6,7 +6,7 @@
  * @a: pointer to first element in the 2-d array
  */
 
-void print_chessboard(char *a[8])
+void print_chessboard(char (*a)[8])
 {
 	int i, j;
 
