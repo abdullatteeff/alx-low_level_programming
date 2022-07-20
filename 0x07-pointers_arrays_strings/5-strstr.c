@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * _strstr ->  
+ * _strstr -> locates a substring.
  * @haystack: starting address for the value to be copied
  * @needle: value to be filled
  * Return:  ointer to the beginning of the located substring
