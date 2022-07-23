@@ -6,5 +6,5 @@
 */
 void _puts_recursion(char *s)
 {
-	puts("The recursion project");
+	puts(s);
 }
