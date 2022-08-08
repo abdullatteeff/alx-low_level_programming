@@ -6,7 +6,7 @@
 
 void fizz_buzz(void)
 {
-	int x;
+	int a;
 
 	for (a = 1; a <= 100; a++)
 	{
@@ -32,5 +32,4 @@ void fizz_buzz(void)
 		}
 	}
 	putchar('\n');
-	return (0);
 }
