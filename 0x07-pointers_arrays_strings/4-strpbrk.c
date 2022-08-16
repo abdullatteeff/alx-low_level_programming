@@ -1,15 +1,30 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
 
 /**
- * _strpbrk ->  gets the length of a prefix substring.
- * @s: starting address for the value to be copied
- * @accept: value to be filled
- * Return:  a pointer to the byte in s that
- * matches one of the bytes in accept
-*/
+ * *_strpbrk - searches a str for any of a set of bytes
+ * @s: str to be scanned
+ * @accept: str containing the char to match
+ * Return: pointer to the char in s that matches one of the char in accept
+ */
+
 char *_strpbrk(char *s, char *accept)
 {
-	return (strpbrk(s, accept));
+	int i = 0;
+	int j = 0;
+
+	while (s[i] != '\0')
+	{
+		j = 0;
+		while (accept[j] != '\0')
+		{
+			if (s[i] == accept[j])
+			{
+				return (&s[i]);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
+

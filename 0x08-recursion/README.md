@@ -1,1 +1,1 @@
-This is RECURSION project
+# Solution for the project 0x08-recursion

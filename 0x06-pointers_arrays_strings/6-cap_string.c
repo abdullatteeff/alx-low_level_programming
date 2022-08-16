@@ -1,27 +1,44 @@
 #include "main.h"
-#include <string.h>
+#include <ctype.h>
+
 /**
-* cap_string ->  capitalizes all words of a string.
-* @x: - param1
-* Return: string
-*/
-char *cap_string(char *x)
+ * *cap_string - capitalizes all words of a string
+ * @s: string to be processed
+ * Return: capitalized string
+ */
+
+char *cap_string(char *s)
 {
-	char spc[] = {32, 9, '\n', ',', ';', '!', '?', '"', '(', ')', '{', '}'};
+	int i = 0;
 
-	int len = 13;
-	int a = 0, i;
-
-	while (x[a])
+	while (s[i] != '\0')
 	{
-		i = 0;
-		while (i < len)
+		if (i == 0)
 		{
-			if ((a == 0 || x[a - 1] == spc[i]) && (x[a] >= 97 && x[a] <= 122))
-			x[a] = x[a] - 32;
-			i++;
+			s[i] = toupper(s[i]);
 		}
-		a++;
+		else if (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t')
+		{
+			s[i] = toupper(s[i]);
+		}
+		else if (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.')
+		{
+			s[i] = toupper(s[i]);
+		}
+		else if (s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"')
+		{
+			s[i] = toupper(s[i]);
+		}
+		else if (s[i - 1] == '(' || s[i - 1] == ')')
+		{
+			s[i] = toupper(s[i]);
+		}
+		else if (s[i - 1] == '{' || s[i - 1] == '}')
+		{
+			s[i] = toupper(s[i]);
+		}
+		i++;
 	}
-	return (x);
+	return (s);
 }
+

@@ -1,15 +1,35 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
 
 /**
- * _strspn ->  gets the length of a prefix substring.
- * @s: starting address for the value to be copied
- * @accept: value to be filled
- * Return:  number of bytes in the initial segment of s
- * which consist only of bytes from accept
-*/
+ * _strspn - gets the length of a prefix substring
+ * @s: main str to be scanned
+ * @accept: str containing the list of char to match
+ * Return: number of char in the initial segment of s
+ */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	return (strspn(s, accept));
+	unsigned int count = 0;
+	int i = 0;
+	int j = 0;
+
+	while (s[i] != '\0')
+	{
+		if (s[i] == 32)
+		{
+			break;
+		}
+		j = 0;
+		while (accept[j] != '\0')
+		{
+			if (s[i] == accept[j])
+			{
+				count++;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (count);
 }
+

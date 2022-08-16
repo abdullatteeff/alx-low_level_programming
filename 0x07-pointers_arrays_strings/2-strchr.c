@@ -1,15 +1,22 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
 
 /**
- * _strchr -> function that copies memory area.
- * @s: starting address for the value to be copied
- * @c: value to be filled
- * Return:  a pointer to the first occurrence of the character c
- * in the string s, or NULL if the character is not found
-*/
+ * *_strchr - locates a char in a str
+ * @s: str to be scanned
+ * @c: char to be searched in str
+ * Return: pointer to the first occurrence of char c in s
+ */
+
 char *_strchr(char *s, char c)
 {
-	return (strchr(s, c));
+	int i;
+
+	for (i = 0; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (&s[i]);
+	}
+
+	return (NULL);
 }
+

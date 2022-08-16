@@ -1,20 +1,24 @@
 #include "main.h"
-#include <string.h>
+#include <ctype.h>
+
 /**
-* string_toupper ->  compares two strings.
-* @x: - param1
-* Return: string
-*/
-char *string_toupper(char *x)
+ * *string_toupper - changes all lowercase letters of a str to uppercase
+ * @s: string to be processed
+ * Return: string in upppercase
+ */
+
+char *string_toupper(char *s)
 {
 	int i = 0;
 
-	while (x[i])
+	while (s[i] != '\0')
 	{
-		if (x[i] >= 97 && x[i] <= 122)
-		x[i] = x[i] - 32;
-
+		if (s[i] >= 'a' || s[i] <= 'z')
+		{
+			s[i] = toupper(s[i]);
+		}
 		i++;
 	}
-	return (x);
+	return (s);
 }
+
